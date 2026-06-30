@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int reverseNumber(int n, int rev) {
+    if (n == 0)
+        return rev;
+    rev = rev * 10 + (n % 10);
+    return reverseNumber(n / 10, rev);
+}
+int main() {
+    int n;
+    cin >> n;
+    cout << "Reversed Number: " << reverseNumber(n, 0);
+    return 0;
+}
